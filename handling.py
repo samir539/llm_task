@@ -36,15 +36,20 @@ class PaperHandling:
         :param extracted_text: the extracted text upon which to apply the parser
         """
         
-
+    #struggles with certain characters
     def unwrap_pdf(self):
         """
         method to unwrap pdf into data we want
         """
+        self.content = ""
         reader = PdfReader(f"./papers/{self.paper_name}.pdf")
-        page = reader.pages[0]
-        print(page.extract_text())
-
+        for i in range(0, len(reader.pages)):
+            self.content += reader.pages[i].extract_text() 
+        self.content = str(self.content.encode("utf-8", errors="replace"))
+        self.content = self.content.replace("\\n","\n")
+        print("the type of bb is ", self.content)
+        
+        
     def unwrap_images(self):
         """
         method to unwrap images
@@ -58,7 +63,7 @@ class PaperHandling:
 
 class LLM_Agent:
     """
-    
+
     """
 
 
