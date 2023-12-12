@@ -1,5 +1,7 @@
 import re
 from PyPDF2 import PdfReader
+import os
+import openai
 
 
 class PaperHandling:
@@ -63,12 +65,32 @@ class PaperHandling:
 
 class LLM_Agent:
     """
+    class to generate an LLM agent which is used to analyse the text in question 
 
     """
+    def __init__(self,temp):
+        self.temp = temp
+
+    @staticmethod
+    def read_api_key(file_path='keys.txt'):
+        with open(file_path, 'r') as file:
+            api_key = file.read().strip()
+        return api_key
+
+    def openai_verify(self):
+        key = self.read_api_key()
+        openai.api_key = os.getenv(key) or key
+        print(openai.Engine.list())
+
+        
 
 
 
 paper = PaperHandling("UJPR-4-1-RW1")
 paper.unwrap_pdf()
+
+llm = LLM_Agent(10)
+llm.openai_verify()
+
 
 
