@@ -98,22 +98,17 @@ class LLM_Agent:
         :param prompt: the prompt
         :param context: the context in question
         """
-
         completion = self.client.chat.completions.create(
-        model = 'gpt-3.5-turbo-16k',
+        model = 'gpt-3.5-turbo-1106',
         messages = [
         {'role': 'user', 'content': prompt}],
-        temperature = 1  )
+        temperature = 1)
         print(completion.choices[0].message.content)
 
-        # result = openai.Completion.create(
-        #     engine = "gpt-4",
-        #     prompt = prompt,
-        #     max_tokens=2000
-        # )
-        # print(result['choices'][0]['text'].strip())
-
+       
         
+
+
 
 
 
