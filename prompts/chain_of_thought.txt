@@ -1,0 +1,53 @@
+For any possible plant based medicine please extract the following fields:
+1.) Plant along with the Disease it cures / Activity: Identify which plants are used to treat or
+manage which specific diseases or activities.
+2.) Plant-Compound: Extract information about specific compounds
+found in these plants
+3.) Plant-Location of origin: Determine the geographical locations
+where these plants traditionally used.
+
+The following text is provided as an example case:
+
+
+Sample Text:
+Digitalis (/ˌdɪdʒɪˈteɪlɪs/[2] or /ˌdɪdʒɪˈtælɪs/[3]) is a genus of about 20 species of herbaceous perennial plants, shrubs, and biennials, commonly called foxgloves.
+
+Digitalis is native to Europe, Western Asia, and northwestern Africa. The flowers are tubular in shape, produced on a tall spike, and vary in colour with species, from purple to pink, white, and yellow. The scientific name means "finger". The genus was traditionally placed in the figwort family, Scrophulariaceae, but phylogenetic research led taxonomists to move it to the Veronicaceae in 2001.[4] More recent phylogenetic work has placed it in the much enlarged family Plantaginaceae. 
+
+Digitalis, drug obtained from the dried leaves of the common foxglove (Digitalis purpurea) and used in medicine to strengthen contractions of the heart muscle. Belonging to a group of drugs called cardiac glycosides, digitalis is most commonly used to restore adequate circulation in patients with congestive heart failure, particularly as caused by atherosclerosis or hypertension. The drug is also used to slow the rate of ventricular contraction in patients with atrial fibrillation or flutter. Digitalis directly increases the contractile power of the heart muscle, enabling a disease-weakened heart to keep up with the body’s demand for heart action. Other effects of digitalis include a slowing of the heartbeat, an increase in the heart’s output, and a decrease in the size of the heart. Digitoxin and digoxin are among the most commonly prescribed forms of digitalis. Treatment with either of these drugs must involve careful monitoring to avoid adverse effects (e.g., heart palpitations, anorexia, vomiting, and diarrhea) that may result from their accumulation in the body.
+
+Digoxin is a cardenolide glycoside that is digitoxin beta-hydroxylated at C-12. A cardiac glycoside extracted from the foxglove plant, Digitalis lanata, it is used to control ventricular rate in atrial fibrillation and in the management of congestive heart failure with atrial fibrillation, but the margin between toxic and therapeutic doses is small. It has a role as an epitope, an anti-arrhythmia drug, a cardiotonic drug and an EC 3.6.3.9 (Na(+)/K(+)-transporting ATPase) inhibitor. It is a cardenolide glycoside and a steroid saponin. It is a conjugate acid of a digoxin(1-).
+
+Sample Answer: 
+
+1.) The drug in question is Digitalis which is obtained from the dried leaves of the foxglove otherwise known as digitalis purpurea. Based on the fact that Digitalis is used in medicine to strengthen contractions of the heart we can conclude that it treats cardiac conditions. We see in the sample text that it restores circulation to patients with congestive heart failure and slows the rate of ventricular contraction in patients with atrial fibrillation. Since digitalis increases the contractile power of the heart muscle it can be used to treat heart conditions especially for people with weak hearts. Based on the text and the preceeding reasoning the answer is:
+Plant : Digitalis Purpurea (Dried foxglove)
+Disease/Activity: Cardiac Glycosides
+
+2.) We see that Digitalis is a cardenolide glycoside that is digitoxin beta-hydroxylated at C-12. We see from the text that it is also a steroid saponin and so using the preceeding reasoning the answer is:
+Plant: Digitalis Purpurea (Drived foxglove)
+Compounds: Cardenolide hycoside, steroid saponin
+
+3.) We see that Digitalis Purpurea (Drived foxglove) is native to Europe, Western Asia and Northwestern Africa. From this we can conclude that Digitalis originates from a range of places all which are in relative proximity to one another and so using the preceeding reasoning the answer is:
+Plant: Digitalis Purpurea (Drived foxglove)
+Location of Origin:  Europe, Western Asia and Northwestern Africa
+
+
+Based on the above example and chain of reasoning used carry out the following :
+
+For any possible plant based medicine please extract the following fields:
+1.) Plant along with the Disease it cures / Activity: Identify which plants are used to treat or
+manage which specific diseases or activities.
+2.) Plant-Compound: Extract information about specific compounds
+found in these plants
+3.) Plant-Location of origin: Determine the geographical locations
+where these plants traditionally used.
+
+On the following text: 
+
+
+
+
+
+
+

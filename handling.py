@@ -102,8 +102,9 @@ class LLM_Agent:
         model = 'gpt-3.5-turbo-1106',
         messages = [
         {'role': 'user', 'content': prompt}],
-        temperature = 1)
-        print(completion.choices[0].message.content)
+        temperature = 1) ##look at this 
+        # print(completion.choices[0].message.content)
+        return completion.choices[0].message.content
 
        
         
