@@ -49,7 +49,6 @@ class PaperHandling:
             self.content += reader.pages[i].extract_text() 
         self.content = str(self.content.encode("utf-8", errors="replace"))
         self.content = self.content.replace("\\n","\n")
-        print("the type of bb is ", self.content)
         return self.content
         
         
@@ -69,8 +68,8 @@ class LLM_Agent:
     class to generate an LLM agent which is used to analyse the text in question 
 
     """
-    def __init__(self,temp):
-        self.temp = temp
+    def __init__(self):
+        pass
 
     def __repr__(self):
         return (f'{self.__class__.__name__}')
@@ -102,7 +101,7 @@ class LLM_Agent:
         model = 'gpt-3.5-turbo-1106',
         messages = [
         {'role': 'user', 'content': prompt}],
-        temperature = 1) ##look at this 
+        temperature = 0) ##look at this 
         # print(completion.choices[0].message.content)
         return completion.choices[0].message.content
 
@@ -113,15 +112,16 @@ class LLM_Agent:
 
 
 
-paper = PaperHandling("UJPR-4-1-RW1")
-context = paper.unwrap_pdf()
 
-llm = LLM_Agent(10)
-llm.openai_verify()
-prompt_pt = ":::\nbased on the previous text tell me one interesting fact"
-print(context + prompt_pt)
-print("the output is ,\n")
-llm.query(context + prompt_pt)
 
+if __name__ == "__main__":
+    paper = PaperHandling("UJPR-4-1-RW1")
+    context = paper.unwrap_pdf()
+
+    llm = LLM_Agent()
+    llm.openai_verify()
+    prompt_pt = "\nbased on the previous text tell me one interesting fact"
+
+    print(llm.query(context + prompt_pt))
 
 
